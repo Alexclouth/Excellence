@@ -14,10 +14,15 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Excellence Tutor - Inspiring Academic Excellence",
+  title: "Excellence Tutor",
   description: "Personalized home tutoring services for students from Kindergarten to Grade 12",
   generator: "v0.app",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png", 
+  },
 }
+
 
 export default function RootLayout({
   children,
