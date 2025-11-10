@@ -201,8 +201,8 @@ export function ContactSection() {
           </h3>
           <div className="rounded-2xl overflow-hidden shadow-xl border-2">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252230.0202855027!2d38.61332425704968!3d8.963479548513721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24d49!2sAddis%20Ababa!5e0!3m2!1sen!2set!4v1762805947560!5m2!1sen!2set"
-             width="100%"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d169487.71353429882!2d38.69605142430726!3d8.962868462215287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24d49!2sAddis%20Ababa!5e0!3m2!1sen!2set!4v1762806462760!5m2!1sen!2set"
+              width="100%"
               height="400"
               style={{ border: 0 }}
               allowFullScreen
