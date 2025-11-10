@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin, Send, Globe } from "lucide-react"
+import { Mail, Phone, MapPin, Send, Globe, MessageCircle } from "lucide-react"
 import emailjs from "@emailjs/browser"
 
 export function ContactSection() {
@@ -31,10 +31,10 @@ export function ContactSection() {
     if (formRef.current) {
       emailjs
         .sendForm(
-          "service_dls7dnk", // 🟢 replace with your EmailJS service ID
-          "template_ra2f25f", // 🟢 replace with your EmailJS template ID
+          "service_dls7dnk",
+          "template_ra2f25f",
           formRef.current,
-          "_Iv1OHOurgBeawuu9" // 🟢 replace with your EmailJS public key
+          "_Iv1OHOurgBeawuu9"
         )
         .then(
           () => {
@@ -75,8 +75,9 @@ export function ContactSection() {
   ]
 
   return (
-    <section id="contact" ref={ref} className="py-24 md:py-32 bg-muted/30">
+    <section id="contact" ref={ref} className="py-24 md:py-32 bg-muted/30 relative">
       <div className="container mx-auto px-4">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -91,6 +92,7 @@ export function ContactSection() {
           </p>
         </motion.div>
 
+        {/* Contact Form + Info */}
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <motion.div
@@ -104,47 +106,39 @@ export function ContactSection() {
               </h3>
 
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <Input
-                    name="name"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
-                    className="h-12"
-                  />
-                </div>
-                <div>
-                  <Input
-                    name="email"
-                    type="email"
-                    placeholder="Your Email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required
-                    className="h-12"
-                  />
-                </div>
-                <div>
-                  <Input
-                    name="phone"
-                    type="tel"
-                    placeholder="Your Phone"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="h-12"
-                  />
-                </div>
-                <div>
-                  <Textarea
-                    name="message"
-                    placeholder="Your Message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    required
-                    className="min-h-32"
-                  />
-                </div>
+                <Input
+                  name="name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  required
+                  className="h-12"
+                />
+                <Input
+                  name="email"
+                  type="email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  required
+                  className="h-12"
+                />
+                <Input
+                  name="phone"
+                  type="tel"
+                  placeholder="Your Phone"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  className="h-12"
+                />
+                <Textarea
+                  name="message"
+                  placeholder="Your Message"
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  required
+                  className="min-h-32"
+                />
 
                 <Button
                   type="submit"
@@ -194,6 +188,54 @@ export function ContactSection() {
             ))}
           </motion.div>
         </div>
+
+        {/* 🌍 Map Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mt-20 max-w-6xl mx-auto"
+        >
+          <h3 className="text-2xl font-serif font-bold text-center mb-6">
+            Find Us on the Map
+          </h3>
+          <div className="rounded-2xl overflow-hidden shadow-xl border-2">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252230.0202855027!2d38.61332425704968!3d8.963479548513721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24d49!2sAddis%20Ababa!5e0!3m2!1sen!2set!4v1762805947560!5m2!1sen!2set"
+             width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* ✅ Floating Mobile Buttons */}
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3 sm:hidden">
+        {/* Message Button */}
+        <motion.a
+          href="sms:+251944331290"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="flex items-center justify-center w-14 h-14 bg-yellow-600 text-white rounded-full shadow-lg hover:bg-blue-600 transition-colors"
+          aria-label="Send SMS"
+        >
+          <MessageCircle size={24} />
+        </motion.a>
+
+        {/* Call Button */}
+        <motion.a
+          href="tel:+251944331290"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="flex items-center justify-center w-14 h-14 bg-amber-900 text-white rounded-full shadow-lg hover:bg-green-600 transition-colors"
+          aria-label="Call us"
+        >
+          <Phone size={24} />
+        </motion.a>
       </div>
     </section>
   )

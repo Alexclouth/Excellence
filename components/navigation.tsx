@@ -73,7 +73,7 @@ export function Navigation() {
             </Button>
             <a href="tel:+251944331290">
               <Button className="bg-gradient-to-r from-primary via-accent to-primary text-primary-foreground hover:shadow-lg hover:shadow-accent/50 transition-all cursor-pointer">
-               📞 +251944331290
+               📞 0944331290
               </Button>
             </a>
           </div>
@@ -109,7 +109,7 @@ export function Navigation() {
                 </a>
               ))}
               <Button className="w-full mt-4 bg-gradient-to-r from-primary via-accent to-primary text-primary-foreground">
-               📞 +251944331290
+               📞 0944331290
               </Button>
             </motion.div>
           )}
