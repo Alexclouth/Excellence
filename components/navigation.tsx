@@ -13,9 +13,7 @@ export function Navigation() {
   const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
+    const handleScroll = () => setIsScrolled(window.scrollY > 50)
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
@@ -36,26 +34,33 @@ export function Navigation() {
         isScrolled ? "bg-background/80 backdrop-blur-lg shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-3 sm:py-4">
         <div className="flex items-center justify-between">
+          {/* Logo + Title */}
           <motion.a
             href="/"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex items-center gap-3 group"
+            className="flex items-center gap-2 sm:gap-3 group truncate"
           >
-            <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-primary via-accent to-primary p-0.5 group-hover:scale-110 transition-transform">
+            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-primary via-accent to-primary p-0.5 group-hover:scale-110 transition-transform shrink-0">
               <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-                <Image src="/logo.png" alt="Excellence Tutor" width={30} height={30} className="w-8 h-8" />
+                <Image
+                  src="/logo.png"
+                  alt="Excellence Tutor"
+                  width={30}
+                  height={30}
+                  className="w-6 h-6 sm:w-8 sm:h-8"
+                />
               </div>
             </div>
-            <span className="text-2xl font-serif font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+            <span className="text-lg sm:text-2xl font-serif font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent leading-tight">
               Excellence Tutor
             </span>
           </motion.a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6 lg:gap-8">
             {navLinks.map((link, index) => (
               <motion.a
                 key={link.name}
@@ -73,7 +78,7 @@ export function Navigation() {
             </Button>
             <a href="tel:+251944331290">
               <Button className="bg-gradient-to-r from-primary via-accent to-primary text-primary-foreground hover:shadow-lg hover:shadow-accent/50 transition-all cursor-pointer">
-               📞 0944331290
+                📞 0944331290
               </Button>
             </a>
           </div>
@@ -83,7 +88,12 @@ export function Navigation() {
             <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
               {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
             </Button>
-            <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle Menu"
+            >
               {isMobileMenuOpen ? <X /> : <Menu />}
             </Button>
           </div>
@@ -96,20 +106,20 @@ export function Navigation() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden mt-4 pb-4"
+              className="md:hidden mt-3 pb-3 space-y-2"
             >
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block py-2 text-foreground hover:text-accent transition-colors"
+                  className="block py-2 text-foreground hover:text-accent transition-colors text-base"
                 >
                   {link.name}
                 </a>
               ))}
-              <Button className="w-full mt-4 bg-gradient-to-r from-primary via-accent to-primary text-primary-foreground">
-               📞 0944331290
+              <Button className="w-full mt-3 bg-gradient-to-r from-primary via-accent to-primary text-primary-foreground">
+                📞 0944331290
               </Button>
             </motion.div>
           )}
