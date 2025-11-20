@@ -11,7 +11,7 @@ export function HeroSection() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('/students-studying-in-modern-bright-classroom-with-.jpg')",
+            backgroundImage: "url('/students-studying-in-modern-bright-classroom-with-.webp')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/60 to-background/90" />
