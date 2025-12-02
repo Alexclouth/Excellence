@@ -13,54 +13,54 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+// =========================
+//        🔥 METADATA
+// =========================
+
 export const metadata: Metadata = {
   title: {
     default: "Tutoring in Addis Ababa | Excellence Home Tutor",
     template: "%s | Excellence Home Tutor",
   },
+
   description:
-    "Home tutoring in Addis Ababa. Excellence Home Tutor provides expert tutoring for primary, secondary, and high school students across Ethiopia.",
+    "Excellence Home Tutor offers home tutoring in Addis Ababa for Kindergarten to Grade 12. High-quality tutors in math, English, science, and more.",
+
   keywords: [
     "tutor in Addis Ababa",
     "home tutor in addis ababa",
     "private tutor near me",
-    "home tutor near me",
-    "tutor in Ethiopia",
-    "Ethio home tutor",
-    "Kelem tutor",
-    "mefthe tutor",
-    "አስጠኚ",
-    "ቤት ለቤት አስጠኚ",
-    "private tutor Ethiopia",
-    "tutoring service Addis Ababa",
+    "tutor Ethiopia",
     "female tutor Addis Ababa",
     "male tutor Addis Ababa",
+    "አስጠኚ",
+    "ቤት ለቤት አስጠኚ",
     "Excellence Home Tutor",
   ],
+
   metadataBase: new URL("https://www.excellencehometutor.com"),
 
-  // OpenGraph for shared links
   openGraph: {
-    title: "Excellence Home Tutor — Expert Tutoring in Addis Ababa",
+    title: "Tutors in Addis Ababa — Excellence Home Tutor",
     description:
-      "Personalized tutoring services for students from Kindergarten to Grade 12 in Addis Ababa, Ethiopia.",
+      "Professional one-to-one tutoring services in Addis Ababa for primary and secondary students.",
     url: "https://www.excellencehometutor.com",
     siteName: "Excellence Home Tutor",
+    type: "website",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Excellence Home Tutor Logo",
+        alt: "Excellence Tutor Logo",
       },
     ],
     locale: "en_ET",
-    type: "website",
   },
 
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
     apple: "/favicon.png",
   },
 
@@ -70,16 +70,20 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
+    title: "Tutors in Addis Ababa | Excellence Tutor",
+    description:
+      "Top-rated private home tutoring in Addis Ababa for K-12 students.",
     site: "@excellencehometutor",
     creator: "@excellencehometutor",
-    title: "Excellence Home Tutor | Tutoring in Addis Ababa",
-    description:
-      "Professional home tutoring services in Addis Ababa for all grade levels.",
     images: ["/logo.png"],
   },
 
-  generator: "Next.js + Excellence Home Tutor",
+  generator: "Next.js | Excellence Tutor",
 };
+
+// ===================================================
+//       🔥 ROOT LAYOUT — OPTIMIZED FOR SEO
+// ===================================================
 
 export default function RootLayout({
   children,
@@ -89,7 +93,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* 🔥 SEO Boost — Structured Data for Local Business */}
+        {/* =========================================
+              🔥 JSON-LD — Local Business Schema
+              Boosts Local SEO + Google Ranking
+        ========================================== */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -97,25 +104,33 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Excellence Home Tutor",
-              "url": "https://www.excellencehometutor.com",
               "image": "https://www.excellencehometutor.com/logo.png",
               "logo": "https://www.excellencehometutor.com/logo.png",
+              "url": "https://www.excellencehometutor.com",
               "description":
-                "Professional one-to-one tutoring in Addis Ababa for primary, secondary, and high school students.",
+                "Professional home tutoring in Addis Ababa for kindergarten, primary, and high school students.",
+              "telephone": "+251956358473",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "",
+                "streetAddress": "Gurd Shola",
                 "addressLocality": "Addis Ababa",
                 "addressRegion": "Addis Ababa",
                 "addressCountry": "ET",
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+251944331290",
+                "telephone": "+251956358473",
                 "contactType": "customer service",
                 "availableLanguage": ["English", "Amharic"],
               },
-              "areaServed": "Addis Ababa, Ethiopia",
+              "areaServed": [
+                "Bole",
+                "Yeka",
+                "CMC",
+                "Piassa",
+                "Saris",
+                "Addis Ababa",
+              ],
             }),
           }}
         />
