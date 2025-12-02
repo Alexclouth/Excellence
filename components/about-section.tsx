@@ -98,7 +98,7 @@ export function AboutSection() {
           className="relative rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto"
         >
           <Image
-            src="/hometutor.jpg"
+            src="https://res.cloudinary.com/dewutmxvk/image/upload/v1764705627/hometutor_krcsgk.jpg"
             alt="A home tutor helping students learn in a focused environment"
             width={1600}
             height={900}

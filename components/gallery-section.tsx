@@ -8,12 +8,12 @@ export function GallerySection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   const images = [
-    { src: "/giving_tutor.jpg", alt: "Student studying" },
-    { src: "/maths_teacher.jpg", alt: "Math tutoring" },
-    { src: "/science_teacher.jpg", alt: "Science learning" },
-    { src: "/english_teacher.jpg", alt: "English session" },
-    { src: "/University-graduates-in-Ethiopia-800x500.webp", alt: "Students success" },
-    { src: "/studentsGroup.jpg", alt: "Our tutors" },
+    { src: "https://res.cloudinary.com/dewutmxvk/image/upload/v1764705743/giving_tutor_arsetk.jpg", alt: "Student studying" },
+    { src: "https://res.cloudinary.com/dewutmxvk/image/upload/v1764705743/maths_teacher_lpz5sc.jpg", alt: "Math tutoring" },
+    { src: "https://res.cloudinary.com/dewutmxvk/image/upload/v1764705871/science_teacher_cqaah0.avif", alt: "Science learning" },
+    { src: "https://res.cloudinary.com/dewutmxvk/image/upload/v1764705743/english_teacher_qzc6zg.jpg", alt: "English session" },
+    { src: "https://res.cloudinary.com/dewutmxvk/image/upload/v1764705929/University-graduates-in-Ethiopia-800x500_l5cdav.webp", alt: "Students success" },
+    { src: "https://res.cloudinary.com/dewutmxvk/image/upload/v1764705961/studentsGroup_yngqtw.jpg", alt: "Our tutors" },
   ]
 
   return (

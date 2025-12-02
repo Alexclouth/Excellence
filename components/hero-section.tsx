@@ -11,7 +11,7 @@ export function HeroSection() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('/students-studying-in-modern-bright-classroom-with-.webp')",
+            backgroundImage: "url('https://res.cloudinary.com/dewutmxvk/image/upload/v1764705495/students-studying-in-modern-bright-classroom-with-_z9xmjg.webp')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/60 to-background/90" />
@@ -98,13 +98,13 @@ export function HeroSection() {
             Start Learning Today
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
-          <a href="tel:+251944331290">
+          <a href="tel:+251956358473">
             <Button
               size="lg"
               variant="outline"
               className="bg-gradient-to-r cursor-pointer from-primary via-accent to-primary text-primary-foreground hover:shadow-2xl hover:shadow-accent/50 text-lg px-8 py-6 rounded-full transition-all hover:scale-105"
             >
-              📞 +251944331290
+              📞 +251956358473
             </Button>
           </a>
         </motion.div>

@@ -56,7 +56,7 @@ export function Footer(): React.JSX.Element {
     { icon: Facebook, href: "https://www.facebook.com/HomeTutorInAddisAbaba", label: "Facebook" },
     { icon: Instagram, href: "https://www.instagram.com/excellence_hometutor1", label: "Instagram" },
     { icon: Send, href: "https://t.me/excellencetutor", label: "Telegram" },
-    { icon: Phone, href: "tel:+251944331290", label: "Phone" },
+    { icon: Phone, href: "tel:+251956358473", label: "Phone" },
   ]
 
   return (

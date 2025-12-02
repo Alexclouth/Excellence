@@ -53,8 +53,8 @@ export function ContactSection() {
     {
       icon: Phone,
       title: "Call Us",
-      content: "+251944331290",
-      link: "tel:+251944331290",
+      content: "+251956358473",
+      link: "tel:+251956358473",
     },
     {
       icon: Mail,
@@ -217,7 +217,7 @@ export function ContactSection() {
       <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3 sm:hidden">
         {/* Message Button */}
         <motion.a
-          href="sms:+251944331290"
+          href="sms:+251956358473"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           className="flex items-center justify-center w-14 h-14 bg-yellow-600 text-white rounded-full shadow-lg hover:bg-blue-600 transition-colors"
@@ -228,7 +228,7 @@ export function ContactSection() {
 
         {/* Call Button */}
         <motion.a
-          href="tel:+251944331290"
+          href="tel:+251956358473"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           className="flex items-center justify-center w-14 h-14 bg-amber-900 text-white rounded-full shadow-lg hover:bg-green-600 transition-colors"

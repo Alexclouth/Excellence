@@ -43,7 +43,7 @@ export function Navigation() {
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center gap-2 sm:gap-3 group truncate"
           >
-            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-primary via-accent to-primary p-0.5 group-hover:scale-110 transition-transform shrink-0">
+            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-primary via-accent to-primary p-0.5 transition-transform shrink-0">
               <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
                 <Image
                   src="/logo.png"
@@ -76,9 +76,9 @@ export function Navigation() {
             <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
               {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
             </Button>
-            <a href="tel:+251944331290">
+            <a href="tel:+251956358473">
               <Button className="bg-gradient-to-r from-primary via-accent to-primary text-primary-foreground hover:shadow-lg hover:shadow-accent/50 transition-all cursor-pointer">
-                📞 0944331290
+                📞 0956358473
               </Button>
             </a>
           </div>
@@ -119,7 +119,7 @@ export function Navigation() {
                 </a>
               ))}
               <Button className="w-full mt-3 bg-gradient-to-r from-primary via-accent to-primary text-primary-foreground">
-                📞 0944331290
+                📞 0956358473
               </Button>
             </motion.div>
           )}
